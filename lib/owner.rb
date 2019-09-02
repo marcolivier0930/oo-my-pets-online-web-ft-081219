@@ -1,3 +1,5 @@
-class Owner
-  # code goes here
+class Owner 
+  def initialize()
+    
+  end
 end
