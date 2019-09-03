@@ -34,7 +34,7 @@ class Owner
   end
   
   def dogs 
-    og.all.select{|dog| dog.owner}
+    Dog.all.select{|dog| dog.owner}
   end 
   
 end
