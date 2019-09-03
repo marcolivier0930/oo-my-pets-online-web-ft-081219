@@ -8,6 +8,6 @@ class Owner
   end
   
   def say_species
-    species 
+    re 
   end
 end
