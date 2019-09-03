@@ -3,6 +3,7 @@ class Owner
   attr_reader :name 
   
   @@all = []
+  @@pets = {:dog => [], :cat =>[]}
   
   def initialize(name, species = "human")
     @name = name
@@ -36,5 +37,10 @@ class Owner
   def dogs 
     Dog.all.select{|dog| dog.owner == self}
   end 
+  
+  def buy_cat
+    @@pets[:cat] << Cat.new(name, self)
+    @@pets[:dog] << Dog.new(name, self)
+  end
   
 end
