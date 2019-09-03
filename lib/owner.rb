@@ -69,4 +69,8 @@ class Owner
       val2.clear
     end
   end
+  
+  def list_pets
+    return "I have #{@@pets[:dog]} dog, and #{@@pets[:cat]}(s)"
+  end
 end
