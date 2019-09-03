@@ -5,6 +5,7 @@ class Owner
   @@all = []
   @@pets = {:dog => [], :cat =>[]}
   
+  
   def initialize(name, species = "human")
     @name = name
     @species = species 
@@ -55,6 +56,17 @@ class Owner
   def feed_cats
     self.cats.each do |cat|
       cat.mood = "happy"
+    end
+  end
+  def sell_pets
+    pets = self.dogs + self.cats 
+
+    pets.each do |pet|
+      pet.mood = "nervous"
+      pet.owner = nil 
+    end
+    @@pets.each do |val1, val2|
+      val2.clear
     end
   end
 end
